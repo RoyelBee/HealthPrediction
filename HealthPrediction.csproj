@@ -249,9 +249,12 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Patient\CheckDisease.cshtml" />
     <Content Include="Views\Home\AdminPage.cshtml" />
     <Content Include="Views\Home\PatientPage.cshtml" />
+    <Content Include="Views\Shared\_patientLayout.cshtml" />
+    <Content Include="Views\Patient\PatientProfile.cshtml" />
+    <Content Include="Views\Patient\HeartDisease.cshtml" />
+    <Content Include="Views\Patient\HepatitisB.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

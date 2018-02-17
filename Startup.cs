@@ -7,7 +7,7 @@ namespace HealthPrediction
     public partial class Startup
     {
         public void Configuration(IAppBuilder app)
-        { hwaih
+        { 
             ConfigureAuth(app);
         }
     }

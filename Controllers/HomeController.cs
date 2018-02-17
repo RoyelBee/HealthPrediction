@@ -9,13 +9,17 @@ namespace HealthPrediction.Controllers
     public class HomeController : Controller
     {
 
-
+        //[Authorize]
         public ActionResult Index()
         {
             if (User.IsInRole("CanManagePatient"))
                 return View("AdminPage");
-
-            return View("PatientPage");
+            else if (User.IsInRole("PatientRole"))
+            {
+                return View("PatientPage");
+            }
+            
+            return View();
         }
 
 

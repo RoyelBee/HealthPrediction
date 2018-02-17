@@ -167,11 +167,11 @@ namespace HealthPrediction.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    //// To create a user role
-                    //var roleStore = new RoleStore<IdentityRole>(new ApplicationDbContext());
-                    //var roleManager = new RoleManager<IdentityRole>(roleStore);
-                    //await roleManager.CreateAsync(new IdentityRole("CanManagePatient"));
-                    //await UserManager.AddToRoleAsync(user.Id, "CanManagePatient");
+                    // To create a user role
+                    var roleStore = new RoleStore<IdentityRole>(new ApplicationDbContext());
+                    var roleManager = new RoleManager<IdentityRole>(roleStore);
+                    await roleManager.CreateAsync(new IdentityRole("PatientRole"));
+                    await UserManager.AddToRoleAsync(user.Id, "PatientRole");
 
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
 
@@ -418,7 +418,7 @@ namespace HealthPrediction.Controllers
             return RedirectToAction("Login", "Account");
         }
 
-        //
+        
         // GET: /Account/ExternalLoginFailure
         [AllowAnonymous]
         public ActionResult ExternalLoginFailure()

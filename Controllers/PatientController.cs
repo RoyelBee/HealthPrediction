@@ -16,11 +16,16 @@ namespace HealthPrediction.Controllers
         {
             return View();
         }
+
         public ActionResult PatientProfile()
         {
             return View();
         }
-        public ActionResult CheckDisease()
+        public ActionResult HeartDisease()
+        {
+            return View();
+        }
+        public ActionResult HepatitisB()
         {
             return View();
         }
